@@ -9,15 +9,16 @@ import pg from "pg";
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 3333;
+const hbs = require('hbs');
 
 app.set('view engine', 'hbs');
 // app.set('views', 'C:/expressjs-postgres/src/views')
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
 app.use(bodyParser.text({ type: "text/html" }));
 
-const hbs = require('hbs');
 hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 app.get("/", async (req, res) => {
