@@ -15,7 +15,8 @@ app.use(bodyParser.text({ type: "text/html" }));
 
 app.get("/", async (req, res) => {
   const { rows } = await pool.query("SELECT tadoushi, jidoushi FROM tajiverb");
-  res.send(`Hello, World! The time from the DB is ${rows[0].now}`);
+  res.send(`Tadoushi - Jidoushi`);
+  res.send(`${rows[0].tadoushi} - ${rows[0].jidoushi}`);
 });
 
 app.listen(port, () => {
