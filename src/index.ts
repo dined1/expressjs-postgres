@@ -14,7 +14,7 @@ app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
 app.use(bodyParser.text({ type: "text/html" }));
 
 app.get("/", async (req, res) => {
-  const { rows } = await pool.query("SELECT NOW()");
+  const { rows } = await pool.query("SELECT tadoushi, jidoushi FROM tajiverb");
   res.send(`Hello, World! The time from the DB is ${rows[0].now}`);
 });
 
