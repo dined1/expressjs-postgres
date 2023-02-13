@@ -7,6 +7,7 @@ import pg from "pg";
 const pool = new pg.Pool();
 
 const app = express();
+const path = require('path');
 const port = process.env.PORT || 3333;
 
 app.set('view engine', 'hbs');
