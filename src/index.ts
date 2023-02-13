@@ -4,13 +4,14 @@ import pg from "pg";
 
 // Connect to the database using the DATABASE_URL environment
 //   variable injected by Railway
-const pool = new pg.Pool();
+// const pool = new pg.Pool();
 
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 3333;
 
 app.set('view engine', 'hbs');
+// app.set('views', 'C:/expressjs-postgres/src/views')
 
 app.use(bodyParser.json());
 app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
@@ -20,7 +21,7 @@ const hbs = require('hbs');
 hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 app.get("/", async (req, res) => {
-  const { rows } = await pool.query("SELECT tadoushi, jidoushi FROM tajiverb");
+//   const { rows } = await pool.query("SELECT tadoushi, jidoushi FROM tajiverb");
 //   res.send(`${rows[0].tadoushi} - ${rows[0].jidoushi}`);
   res.render('ind', {
       subject: 'hbs template engine',
