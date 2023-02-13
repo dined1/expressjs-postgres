@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
 app.use(bodyParser.text({ type: "text/html" }));
 
-hbs.registerPartials(path.join(__dirname, 'views/partials'));
+hbs.registerPartials(path.join(__dirname, 'partials'));
 
 app.get("/", async (req, res) => {
 //   const { rows } = await pool.query("SELECT tadoushi, jidoushi FROM tajiverb");
