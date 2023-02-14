@@ -16,13 +16,11 @@
       </header>
       <section>
         <h2>Here are the verbs</h2>
-        <p>
+        <ul style="list-style: none;">
         <% for(var i=0; i < rows.length; i++) { %>
-           <tr>
-             <td><%= rows[i].tadoushi %> - <%= rows[i].jidoushi %></td>
-           </tr>
+             <li><%= rows[i].tadoushi %> - <%= rows[i].jidoushi %></li>
         <% } %>
-        </p>
+        </ul>
       </section>
     </div>
   </body>
