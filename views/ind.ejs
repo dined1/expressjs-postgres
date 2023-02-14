@@ -17,7 +17,11 @@
       <section>
         <h2>Here are the verbs</h2>
         <p>
-          <%= rows[0].tadoushi %> - <%= rows[0].jidoushi %>
+        <% for(var i=0; i < rows.length; i++) { %>
+           <tr>
+             <td><%= rows[i].tadoushi %> - <%= rows[i].jidoushi %></td>
+           </tr>
+        <% } %>
         </p>
       </section>
     </div>
