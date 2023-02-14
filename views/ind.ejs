@@ -24,15 +24,15 @@
             <tr>
                 <td><div><%= rows[i].translation %></div></td>
                 <td>
-                    <BUTTON id="tashow<%= i %>" value="Show" onClick="document.getElementById('tadoushi<%= i %>').style.display='block';
-                     document.getElementById('tashow<%= i %>').style.display='none'">
+                    <button id="tashow<%= i %>" value="Show" onClick="document.getElementById('tadoushi<%= i %>').style.display='block';
+                     document.getElementById('tashow<%= i %>').style.display='none'">Show</button>
                     <div id="tadoushi<%= i %>" style="display:none">
                         <%= rows[i].tadoushi %>
                     </div>
                 </td>
                 <td>
-                    <BUTTON id="jishow<%= i %>" value="Show" onClick="document.getElementById('jidoushi<%= i %>').style.display='block';
-                                         document.getElementById('jishow<%= i %>').style.display='none'">
+                    <button id="jishow<%= i %>" value="Show" onClick="document.getElementById('jidoushi<%= i %>').style.display='block';
+                                         document.getElementById('jishow<%= i %>').style.display='none'">Show</button>
                     <div id="jidoushi<%= i %>" style="display:none">
                         <%= rows[i].jidoushi %>
                     </div>
