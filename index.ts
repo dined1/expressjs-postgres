@@ -22,7 +22,7 @@ app.get("/", async (req, res) => {
   const { rows } = await pool.query("SELECT tadoushi, jidoushi FROM tajiverb");
   res.render('ind', {
     subject: 'EJS template engine',
-    name: 'our template',
+    name: 'Japanese',
     link: 'https://google.com',
     rows: rows
   });
