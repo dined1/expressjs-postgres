@@ -19,7 +19,7 @@ app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
 app.use(bodyParser.text({ type: "text/html" }));
 
 app.get("/", async (req, res) => {
-  const { rows } = await pool.query("SELECT tadoushi, jidoushi FROM tajiverb");
+  const { rows } = await pool.query("SELECT tadoushi, jidoushi, translation FROM tajiverb");
   res.render('ind', {
     subject: 'EJS template engine',
     name: 'Japanese',
